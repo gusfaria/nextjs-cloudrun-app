@@ -7,7 +7,7 @@ on:
 
 env:
   PROJECT_ID: ${{ secrets.CLOUD_RUN_PROJECT_NAME }}
-  REGION: us-east1
+  REGION: us-central1
   # project-name but it can be anything you want
   REPO_NAME: nextjs-cloudrun-app
 
@@ -21,7 +21,7 @@ jobs:
 
       # Authenticate with Google Cloud
       - id: 'auth'
-        uses: 'google-github-actions/auth@v1'
+        uses: 'google-github-actions/auth@v2'
         with:
           credentials_json: '${{ secrets.CLOUD_RUN_SERVICE_ACCOUNT }}'
 
